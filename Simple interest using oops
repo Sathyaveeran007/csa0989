@@ -1,0 +1,35 @@
+class BankAccount {
+    private double principal;
+    private double rate;
+    private int time;
+
+    public BankAccount(double principal, double rate, int time) {
+        this.principal = principal;
+        this.rate = rate;
+        this.time = time;
+    }
+
+    public double calculateSimpleInterest() {
+        return (principal * rate * time) / 100;
+    }
+
+    public double getPrincipal() {
+        return principal;
+    }
+
+    public double getRate() {
+        return rate;
+    }
+
+    public int getTime() {
+        return time;
+    }
+}
+
+public class SimpleInterestCalculator {
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount(1000, 5, 2);
+        double interest = account.calculateSimpleInterest();
+        System.out.println("The simple interest is: " + interest);
+    }
+}￼Enter
